@@ -19,4 +19,11 @@ export default class Calculator {
 
     return Number((x / y).toFixed(2));
   }
+
+  multiply(x, y) {
+    if (typeof x === 'string') x = parseFloat(x);
+    if (typeof y === 'string') y = parseFloat(y);
+
+    return Number((x * y).toFixed(2));
+  }
 }

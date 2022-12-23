@@ -85,4 +85,45 @@ describe('Calculator', () => {
   test('5, 0 should become "cannot divide by zero"', () => {
     expect(calculator.divide(5, 0)).toBe('cannot divide by zero');
   });
+
+  // multiply
+  test('"5","3" should become 15.00', () => {
+    expect(calculator.multiply('5', '3')).toBe(15.0);
+  });
+
+  test('"5.5","3.3" should become 18.15', () => {
+    expect(calculator.multiply('5.5', '3.3')).toBe(18.15);
+  });
+
+  test('"0","4" should become 0', () => {
+    expect(calculator.multiply('0', '4')).toBe(0);
+  });
+
+  test('"0","0" should become 0', () => {
+    expect(calculator.multiply('0', '0')).toBe(0);
+  });
+
+  test('"2","-5" should become -10.00', () => {
+    expect(calculator.multiply('2', '-5')).toBe(-10.0);
+  });
+
+  test('5, 3 should become 15.00', () => {
+    expect(calculator.multiply(5, 3)).toBe(15.0);
+  });
+
+  test('5.5,3.3 should become 18.15', () => {
+    expect(calculator.multiply(5.5, 3.3)).toBe(18.15);
+  });
+
+  test('0,4 should become 0', () => {
+    expect(calculator.multiply(0, 4)).toBe(0);
+  });
+
+  test('0, 0 should become 0', () => {
+    expect(calculator.multiply(0, 0)).toBe(0);
+  });
+
+  test('2,-5 should become -10.00', () => {
+    expect(calculator.multiply(2, -5)).toBe(-10.0);
+  });
 });
